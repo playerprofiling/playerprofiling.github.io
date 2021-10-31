@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+li:nth-child(even){background-color: #f8f8f8;}
+
+//li:hover {background-color: #ddd;}
+li:hover {background-color: #f2f2ff;}
+
+</style>
+</head>
+
+<body>
+
+<h2>WoW Events and Explanations</h2>
+
+<ol type="1">
+<li><i>id</i>: Identification number of the player</li>
+<li><i>lastModified</i>: Timestamp of the last update of the player’s status</li>
+<li><i>name</i>: Player name</li>
+<li><i>realm</i>: Name of the realm that player created their character in</li>
+<li><i>guild</i>: Name of the guild that player is a member of</li>
+<li><i>battlegroup</i>: Name of the battle group that player is in</li>
+<li><i>class</i>: Identification number of the class that player chose for their character</li>
+<li><i>race</i>: Identification number of  the race that player chose for their character</li>
+<li><i>gender</i>: Identification number of the gender that player chose for their character</li>
+<li><i>level</i>: Current experience level of the player</li>
+<li><i>achievementPoints</i>: Number of points that player gain by doing the achievements</li>
+<li><i>calcClass</i>: Player’s class identifier when used with Blizzard's talent calculator</li>
+<li><i>faction</i>: Identification number of player’s faction</li>
+<li><i>totalHonorableKills</i>: Number of kills that player performs to opposing faction in the same level scale</li>
+<li><i>faceVariation</i>: Identification number of the face variation player chose for their character </li>
+<li><i>skinColor</i>: Identification number of the skin color player chose for their character </li>
+<li><i>hairVariation</i>: Identification number of the hair variation player chose for their character </li>
+<li><i>hairColor</i>: Identification number of the hair color player chose for their character </li>
+<li><i>featureVariation</i>: Identification number of the feature variation player chose for their character</li>
+<li><i>showHelm</i>: Binary representation of player’s choice to show helmet of their character </li>
+<li><i>showCloak</i>: Binary representation of player’s choice to show cloak of their character</li>
+<li><i>customDisplayOptions</i>: Set of identification numbers of player’s choices of customizable display options</li>
+<li><i>numberOfIssues</i>: Number of issues of the player</li>
+<li><i>numberOfSlots</i>: Number of slots that player has</li>
+<li><i>emptyGlyphSlots</i>: Number of empty glyph slots that player has</li>
+<li><i>unspentTalentPoints</i>: Number of talent points that is gained but not used by the player</li>
+<li><i>noSpec</i>: Binary representation that shows that player has a specialiazation or not</li>
+<li><i>numOfUnenchItems</i>: Number of unenchanted items that player has</li>
+<li><i>emptySockets</i>: Number of empty sockets that player has</li>
+<li><i>numOfItemsWithEmptySoc</i>: Number of items of the player that has empty sockets</li>
+<li><i>appropriateArmorType</i>: Identification number of appropriate armor type for player’s character</li>
+<li><i>numOfInappArmorType</i>: Number of inappropriate armor types for player’s character</li>
+<li><i>numOfLowLevelItems</i>: Number of items that is low level than player’s available level</li>
+<li><i>lowLevelThreshold</i>: Threshold level of low level items that player can use</li>
+<li><i>numOfMissingExtSoc</i>: Number of missing extra sockets of items that player has</li>
+<li><i>recommendedBeltBuckle</i>: Identification number of belt buckle that is recommended to the player</li>
+<li><i>nMissingBlacksmithSockets</i>: Number of missing blacksmith sockets of the player</li>
+<li><i>nMissingEnchanterEnchants</i>: Number of missing enchanter enchants of the player</li>
+<li><i>nMissingEngineerEnchants</i>: Number of missing engineer enchants of the player</li>
+<li><i>nMissingScribeEnchants</i>: Number of missing scribe enchants of the player</li>
+<li><i>nMissingJewelcrafterGems</i>: Number of missing jewelcrafter gems of the player</li>
+<li><i>nMissingLeatherworkerEnchants</i>: Number of missing leatherworker enchants of the player</li>
+<li><i>nFeedBosskill</i>: Number of player’s boss kill in the last 50 activity of the player</li>
+<li><i>nFeedLoot</i>: Number of player’s looting activity in the last 50 activity of the player</li>
+<li><i>nFeedCriteria</i>: Number of player’s completed criteria in the last 50 activity of the player</li>
+<li><i>nFeedAch</i>: Number of player’s achievement gain in the last 50 activity of the player</li>
+<li><i>feedBosskillFreq</i>: Average frequency of player’s boss kill in the last 50 activity of the player</li>
+<li><i>feedLootFreq</i>: Average frequency of player’s looting activity in the last 50 activity of the player</li>
+<li><i>feedCriteriaFreq</i>: Average frequency of player’s completed criteria in the last 50 activity of the player</li>
+<li><i>feedAchFreq</i>: Average frequency of player’s achievement gain in the last 50 activity of the player</li>
+<li><i>nDpsHunterPets</i>: Number of damage per second based hunter pets of the player</li>
+<li><i>nTankHunterPets</i>: Number of  tanking based hunter pets of the player</li>
+<li><i>nHealerHunterPets</i>: Number of healer hunter pets of the player</li>
+<li><i>maxUsedFamilyHuntPet</i>: Identification number of most used hunter pet family by the player</li>
+<li><i>averageItemLevel</i>: Average of the levels of the all of the items that player has</li>
+<li><i>averageItemLevelEquipped</i>: Average of the levels of the all of the items that player equiped</li>
+<li><i>headItem</i>: Identification number of the player’s head item that player is equipped</li>
+<li><i>neckItem</i>: Identification number of the player’s neck item that player is equipped</li>
+<li><i>shoulderItem</i>: Identification number of the player’s shoulder item that player is equiped</li>
+<li><i>backItem</i>: Identification number of the player’s back item that player is equipped</li>
+<li><i>chestItem</i>: Identification number of the player’s chest item that player is equipped</li>
+<li><i>tabardItem</i>: Identification number of the player’s tabard item that player is equipped</li>
+<li><i>wristItem</i>: Identification number of the player’s wrist item that player is equipped</li>
+<li><i>handsItem</i>: Identification number of the player’s hands item that player is equipped</li>
+<li><i>waistItem</i>: Identification number of the player’s waist item that player is equipped</li>
+<li><i>legsItem</i>: Identification number of the player’s legs item that player is equipped</li>
+<li><i>feetItem</i>: Identification number of the player’s item that player is equipped</li>
+<li><i>fingerItem1</i>: Identification number of the player’s first finger item that player is equipped</li>
+<li><i>fingerItem2</i>: Identification number of the player’s second finger item that player is equipped</li>
+<li><i>trinketItem1</i>: Identification number of the player’s first trinket that player is equipped</li>
+<li><i>trinketItem2</i>: Identification number of the player’s second trinket that player is equipped</li>
+<li><i>mainHandItem</i>: Identification number of the player’s main hand item that player is equipped</li>
+<li><i>numMountsCollected</i>: Number of mounts collected by the player</li>
+<li><i>numMountsNotCollected</i>: Number of mounts not collected by the player</li>
+<li><i>nGroundMounts</i>: Number of mounts able to move on ground that are collected by the player</li>
+<li><i>nFlyingMounts</i>: Number of mounts able to fly that are collected by the player</li>
+<li><i>nAquaticMounts</i>: Number of mounts able to move in water that are collected by the player</li>
+<li><i>nJumpingMounts</i>: Number of mounts able to jump that are collected by the player</li>
+<li><i>numPetsCollected</i>: Number of pets collected by the player</li>
+<li><i>numPetsNotCollected</i>: Number of pets not collected by the player</li>
+<li><i>nFavoritePets</i>: Number of pets owned by the player that player set as favorite</li>
+<li><i>nPetsCanBattle</i>: Number of pets owned by the player that can battle</li>
+<li><i>nAbilitySelected</i>: Number of different abilities selected by the player for the pets in the pet slots</li>
+<li><i>nEmptyPetSlots</i>: Number of empty pet slots</li>
+<li><i>nLockedPetSlots</i>: Number of locked pet slots</li>
+<li><i>mostUsedAbilityType</i>: Identification number of the most used ability by the player for the pets</li>
+<li><i>avePrRankMaxRation</i>: Average of the ratios of the player’s profession rank over the maximum available profession rank for that profession of the player primary professions</li>
+<li><i>aveScRankMaxRation</i>: Average of the ratios of the player’s profession rank over the maximum available profession rank for that profession of the player secondary professions</li>
+<li><i>pvp2v2wPlayed</i>: Number of 2 player versus 2 player matches played by the player in the current week</li>
+<li><i>pvp2v2wWon</i>: Number of 2 player versus 2 player matches won by the player in the current week</li>
+<li><i>pvp2v2wLost</i>: Number of 2 player versus 2 player matches lost by the player in the current week</li>
+<li><i>pvp2v2sPlayed</i>: Number of 2 player versus 2 player matches played by the player in the current season        </li>
+<li><i>pvp2v2sWon</i>: Number of 2 player versus 2 player matches won by the player in the current season              </li>
+<li><i>pvp2v2sLost</i>: Number of 2 player versus 2 player matches lost by the player in the current season            </li>
+<li><i>pvp3v3wPlayed</i>: Number of 3 player versus 3 player matches played by the player in the current week          </li>
+<li><i>pvp3v3wWon</i>: Number of 3 player versus 3 player matches won by the player in the current week                </li>
+<li><i>pvp3v3wLost</i>: Number of 3 player versus 3 player matches lost by the player in the current week              </li>
+<li><i>pvp3v3sPlayed</i>: Number of 3 player versus 3 player matches played by the player in the current season        </li>
+<li><i>pvp3v3sWon</i>: Number of 3 player versus 3 player matches won by the player in the current season              </li>
+<li><i>pvp3v3sLost</i>: Number of 3 player versus 3 player matches lost by the player in the current season            </li>
+<li><i>pvprbwPlayed</i>: Number of rated battleground matches played by the player in the current week                 </li>
+<li><i>pvpRbgwWon</i>: Number of rated battleground matches won by the player in the current week                      </li>
+<li><i>pvpRbgwLost</i>: Number of rated battleground matches lost by the player in the current week                    </li>
+<li><i>pvpRbgsPlayed</i>: Number of rated battleground matches played by the player in the current season              </li>
+<li><i>pvpRbgsWon</i>: Number of rated battleground matches won by the player in the current season                    </li>
+<li><i>pvpRbgsLost</i>: Number of rated battleground matches lost by the player in the current season                  </li>
+<li><i>pvp2v2SwPlayed</i>: Number of 2 player versus 2 player skirmish matches played by the player in the current week                                </li>
+<li><i>pvp2v2SwWon</i>: Number of 2 player versus 2 player skirmish matches won by the player in the current week                                      </li>
+<li><i>pvp2v2SwLost</i>: Number of 2 player versus 2 player skirmish matches lost by the player in the current week                                    </li>
+<li><i>pvp2v2SsPlayed</i>: Number of 2 player versus 2 player skirmish matches played by the player in the current season                              </li>
+<li><i>pvp2v2SsWon</i>: Number of 2 player versus 2 player skirmish matches won by the player in the current season                                    </li>
+<li><i>pvp2v2SsLost</i>: Number of 2 player versus 2 player skirmish matches lost by the player in the current season                                  </li>
+<li><i>pvpUnkwPlayed</i>: Number of unknown player versus player matches played by the player in the current week                                      </li>
+<li><i>pvpUnkwWon</i>: Number of unknown player versus player matches won by the player in the current week                                            </li>
+<li><i>pvpUnkwLost</i>: Number of unknown player versus player matches lost by the player in the current week                                          </li>
+<li><i>pvpUnksPlayed</i>: Number of unknown player versus player matches played by the player in the current season                                    </li>
+<li><i>pvpUnksWon</i>: Number of unknown player versus player matches won by the player in the current season                                          </li>
+<li><i>pvpUnksLost</i>: Number of unknown player versus player matches lost by the player in the current season                                        </li>
+<li><i>repsAvgValMaxRatio</i>: Average of ratios of the reputation values over the maximum reputation values for that reputation of the player         </li>
+<li><i>healthStat</i>: Player’s current health value                                                                                                   </li>
+<li><i>powerTypeStat</i>: Identification number of player’s current power type                                                                         </li>
+<li><i>powerStat</i>: Player’s current power value                                                                                                     </li>
+<li><i>strStat</i>: Player’s current strength value                                                                                                    </li>
+<li><i>agiStat</i>: Player’s current agility value                                                                                                     </li>
+<li><i>intStat</i>: Player’s current intellect value                                                                                                   </li>
+<li><i>staStat</i>: Player’s current stamina value                                                                                                     </li>
+<li><i>speedRatingStat</i>: Player’s current speed rating value                                                                                        </li>
+<li><i>speedRatingBonusStat</i>: Player’s current bonus speed rating value                                                                             </li>
+<li><i>critStat</i>: Player’s current chance of critical strike value                                                                                  </li>
+<li><i>critRatingStat</i>: Player’s current change of critical strike rating value                                                                     </li>
+<li><i>hasteStat</i>: Player’s current haste (cooldown) value                                                                                          </li>
+<li><i>hasteRatingStat</i>: Player’s current haste rating value                                                                                        </li>
+<li><i>hasteRatingPercentStat</i>: Player’s current percentage equivalent of haste rating value                                                        </li>
+<li><i>masteryStat</i>: Player’s current mastery of the class value                                                                                    </li>
+<li><i>masteryRatingStat</i>: Player’s current rating value of the mastery of the class                                                                 </li>
+<li><i>leechStat</i>: Player’s current leech (health gain from doing damage) value                                                                      </li>
+<li><i>leechRatingStat</i>: Player’s current rating value of the leech stat                                                                             </li>
+<li><i>leechRatingBonusStat</i>: Player’s current bonus rating value of the leech stat                                                                  </li>
+<li><i>versatilityStat</i>: Player’s current versatility (outgoing damage and healing increase and to lesser extended incoming damage decrease) value   </li>
+<li><i>versatilityDamageDoneBonusStat</i>: Player’s current value of player’s bonus versatility regarding to damage done                                </li>
+<li><i>versatilityHealingDoneBonusStat</i>: Player’s current value of player’s bonus versatility regarding to healing done                              </li>
+<li><i>versatilityDamageTakenBonusStat</i>: Player’s current value of player’s bonus versatility regarding to damage taken                              </li>
+<li><i>avoidanceRatingStat</i>: Player’s current rating value of decrease of damage taken by areal attacks                                              </li>
+<li><i>avoidanceRatingBonusStat</i>: Player’s current rating value of bonus decrease of damage taken by areal attacks                                   </li>
+<li><i>smallPenStat</i>: Player’s current value of any of the player’s target’s resistance decrease                                                     </li>
+<li><i>spellCritStat</i>: Player’s current value of change of critical spell damage                                                                     </li>
+<li><i>spellCritRatingStat</i>: Player’s current rating value of change of critical spell damage                                                        </li>
+<li><i>mana5Stat</i>: Player’s current mana regeneration per 5 seconds value outside the combats                                                        </li>
+<li><i>mana5CombatStat</i>: Player’s current mana regeneration per 5 seconds value during the combats                                                   </li>
+<li><i>armorStat</i>: Player’s current value of total resistance gained by the equipped armors                                                          </li>
+<li><i>dodgeStat</i>: Player’s current value of incoming melee damage avoidance chance                                                                  </li>
+<li><i>dodgeRatingStat</i>: Player’s current rating value of incoming melee damage avoidance chance                                                     </li>
+<li><i>parryStat</i>: Player’s current value of incoming frontal melee damage negation chance                                                           </li>
+<li><i>parryRatingStat</i>: Player’s current rating value of incoming frontal melee damage negation chance                                              </li>
+<li><i>blockStat</i>: Player’s current value of chance to block incoming melee and ranged attacks other than spells with a shield                       </li>
+<li><i>blockRatingStat</i>: Player’s current rating value of chance to block incoming melee and ranged attacks other than spells with a shield          </li>
+<li><i>mainHandDmgMinStat</i>: Player’s current value of minimum damage can be made with the main hand attacks done by the player                       </li>
+<li><i>mainHandDmgMaxStat</i>: Player’s current value of maximum damage can be made with the main hand attacks done by the player                       </li>
+<li><i>mainHandSpeedStat</i>: Player’s current value of the speed of the main hand attacks done by the player                                           </li>
+<li><i>mainHandDpsStat</i>: Player’s current value of the damage per second of the main hand attacks done by the player                                 </li>
+<li><i>offHandDmgMinStat</i>: Player’s current value of minimum damage can be made with the off-hand attacks done by the player                         </li>
+<li><i>offHandDmgMaxStat</i>: Player’s current value of maximum damage can be made with the off-hand attacks done by the player                         </li>
+<li><i>offHandSpeedStat</i>: Player’s current value of the speed of the off-hand attacks done by the player                                             </li>
+<li><i>offHandDpsStat</i>: Player’s current value of the damage per second of the off-hand attacks done by the player                                   </li>
+<li><i>rangedDmgMinStat</i>: Player’s current value of minimum damage can be made with the ranged attacks done by the player                            </li>
+<li><i>rangedDmgMaxStat</i>: Player’s current value of maximum damage can be made with the ranged attacks done by the player                            </li>
+<li><i>rangedSpeedStat</i>: Player’s current value of the speed of the ranged attacks done by the player                                                </li>
+<li><i>rangedDpsStat</i>: Player’s current value of the damage per second of the ranged attacks done by the player                                      </li>
+<li><i>nDpsTalents</i>: Number of damage per second based talents that the player has                                                                   </li>
+<li><i>nTankTalens</i>: Number of tanking based talents that the player has                                                                             </li>
+<li><i>nHealerTalents</i>: Number of healing based talents that the player has                                                                          </li>
+<li><i>nTitles</i>: Number of titles that the player has                                                                                                </li>
+<li><i>TalentTreeRespecs</i>: Number of talent tree re-specification                                                                                    </li>
+<li><i>BandagesUsed</i>: Number of the bandages used in the game (most likely for PvP purposes)                                                         </li>
+<li><i>BandageUsedMost</i>: Identification number of the most used bandage                                                                              </li>
+<li><i>DifferentBandageTypesUsed</i>: Number of usage different bandage types                                                                           </li>
+<li><i>HealthPotionsConsumed</i>: Number of the health potions used in the game                                                                         </li>
+<li><i>HealthPotionUsedMost</i>: Identification number of the most used health potion                                                                   </li>
+<li><i>DifferentHealthPotionsUsed</i>: Number of usage different health potion types                                                                    </li>
+<li><i>ManaPotionsConsumed</i>: Number of the mana potions used in the game                                                                             </li>
+<li><i>ManaPotionUsedMost</i>: Identification number of the most used mana potion                                                                       </li>
+<li><i>DifferentManaPotionsUsed</i>: Number of usage different mana potion types                                                                        </li>
+<li><i>ElixirsConsumed</i>: Number of the elixirs used in the game (most likely for PvE or team activity purposes)                                      </li>
+<li><i>ElixirConsumedMost</i>: Identification number of the most used elixir                                                                            </li>
+<li><i>DifferentElixirsUsed</i>: Number of usage different elixir types                                                                                 </li>
+<li><i>FlasksConsumed</i>: Number of the flasks used in the game                                                                                        </li>
+<li><i>FlaskConsumedMost</i>: Identification number of the most used flask                                                                              </li>
+<li><i>DifferentFlasksConsumed</i>: Number of usage different flask types                                                                               </li>
+<li><i>BeveragesConsumed</i>: Number of the beverages used in the game (most likely for questing purposes)                                              </li>
+<li><i>BeverageConsumedMost</i>: Identification number of the most used beverage                                                                        </li>
+<li><i>DifferentBeveragesConsumed</i>: Number of usage different beverage types                                                                         </li>
+<li><i>FoodEaten</i>: Number of the foods used in the game                                                                                              </li>
+<li><i>FoodEatenMost</i>: Identification number of the most used food                                                                                   </li>
+<li><i>DifferentFoodsEaten</i>: Number of usage different food types                                                                                    </li>
+<li><i>HealthstonesUsed</i>: Number teleportations to the player’s home town using healthstone                                                          </li>
+<li><i>TotalFactionsEncountered</i>: Number of different factions encountered by the player                                                             </li>
+<li><i>ItemSlotsEquippedWithUncommonItems</i>: Number of item slots equipped with uncommon items by the player (more likely a casual player)            </li>
+<li><i>ItemSlotsEquippedWithRareItems</i>: Number of item slots equipped with rare items by the player (more likely a casual player)                    </li>
+<li><i>ItemSlotsEquippedWithEpicItems</i>: Number of item slots equipped with epic items by the player (more likely a raider)                           </li>
+<li><i>ItemSlotsEquippedWithLegendaryItems</i>: Number of item slots equipped with legendary items by the player (more likely a raider)                 </li>
+<li><i>ItemSlotsEquippedWithHeirloomItems</i>: Number of item slots equipped with heirloom items by the player                                          </li>
+<li><i>EpicItemsAcquired</i>: Number of epic items acquired by the player                                                                               </li>
+<li><i>EpicItemsLooted</i>: Number of epic items looted by the player                                                                                   </li>
+<li><i>ExtraBankSlotsPurchased</i>: Number of extra bank slots purchased                                                                                </li>
+<li><i>GreedRollsMadeOnLoot</i>: Number of loot requests done by the player during raid with a less chance to approved                                  </li>
+<li><i>NeedRollsMadeOnLoot</i>: Number of loot requests done by the player during raid with a high chance to approved                                   </li>
+<li><i>LargestHitDealt</i>: Value of largest damage done by the player                                                                                  </li>
+<li><i>LargestHitReceived</i>: Value of largest damage received by the player                                                                           </li>
+<li><i>TotalDamageDone</i>: Value of total damage done by the player                                                                                    </li>
+<li><i>TotalDamageReceived</i>: Value of total damage received by the player                                                                            </li>
+<li><i>LargestHealCast</i>: Value of largest heal done by the player                                                                                    </li>
+<li><i>LargestHealReceived</i>: Value of largest heal received by the player                                                                            </li>
+<li><i>TotalHealingDone</i>: Value of total heal done by the player                                                                                     </li>
+<li><i>TotalHealingReceived</i>: Value of total heal received by the player                                                                             </li>
+<li><i>TotalKills</i>: Total number of kills achieved by the player                                                                                     </li>
+<li><i>TotalKillsThatGrantExperienceOrHonor</i>: Total number of kills achieved by the player that grants player experience or honor                    </li>
+<li><i>CreaturesKilled</i>: Number of creatures killed by the player                                                                                    </li>
+<li><i>DifferentCreatureTypesKilled</i>: Number of different types of creatures killed by the player                                                    </li>
+<li><i>CreatureTypeKilledTheMost</i>: Identification number of the creature type killed by the player                                                   </li>
+<li><i>CrittersKilled</i>: Number of critters (creatures with no effects and end-results) killed by the player                                          </li>
+<li><i>WorldHonorableKills</i>: Number of honorable kills done by the player in the world section of the game                                           </li>
+<li><i>ArenaHonorableKills</i>: Number of honorable kills done by the player in the arenas                                                              </li>
+<li><i>BattlegroundHonorableKills</i>: Number of honorable kills done by the player in the battlegrounds                                                </li>
+<li><i>BattlegroundWithTheMostHonorableKills</i>: Identification number of the battleground that player has the largest number of honorable kills       </li>
+<li><i>2v2ArenaHonorableKills</i>: Number of honorable kills done by the player in the 2 player versus 2 player arenas                                  </li>
+<li><i>3v3ArenaHonorableKills</i>: Number of honorable kills done by the player in the 3 player versus 3 player arenas                                  </li>
+<li><i>5v5ArenaHonorableKills</i>: Number of honorable kills done by the player in the 5 player versus 5 player arenas                                  </li>
+<li><i>TotalKillingBlows</i>: Total number of killing blows made by the player                                                                          </li>
+<li><i>TotalDeaths</i>: Total number of revival of the player by other players                                                                          </li>
+<li><i>RevivedByOthers</i>: Total number of revival of the player by other players                                                                      </li>
+<li><i>QuestsCompleted</i>: Number of quest completed by the player                                                                                     </li>
+<li><i>AverageQuestsCompletedPerDay</i>: Average number of quest completed by the player                                                                </li>
+<li><i>DailyQuestsCompleted</i>: Number of daily quest completed by the player                                                                          </li>
+<li><i>AverageDailyQuestsCompletedPerDay</i>: Average number of daily quest completed by the player                                                     </li>
+<li><i>QuestsAbandoned</i>: Number of quests abandoned by the player                                                                                    </li>
+<li><i>Total5playerDungeonsEntered</i>: Total number of 5 player dungeons entered by the player                                                         </li>
+<li><i>Total10playerRaidsEntered</i>: Total number of 10 player dungeons entered by the player                                                          </li>
+<li><i>Total25playerRaidsEntered</i>: Total number of 25 player dungeons entered by the player (most likely a team player)                              </li>
+<li><i>ProfessionsLearned</i>: Number of professions learned by the player                                                                              </li>
+<li><i>ProfessionsAtMaximumSkill</i>: Number of professions upgraded to the maximum skill by the player                                                 </li>
+<li><i>SecondarySkillsAtMaximumSkill</i>: Number of secondary skills upgraded to the maximum skill by the player                                        </li>
+<li><i>CookingSkill</i>: Value of the cooking skill of the player                                                                                       </li>
+<li><i>CookingRecipesKnown</i>: Number of cooking recipes known by the player                                                                           </li>
+<li><i>FirstAidSkill</i>: Value of the first aid skill of the player                                                                                    </li>
+<li><i>FirstAidManualsLearned</i>: Number of learned by the player                                                                                      </li>
+<li><i>FishingSkill</i>: Value of the fishing skill of the player                                                                                       </li>
+<li><i>FishCaught</i>: Number of fishes caught by the player                                                                                            </li>
+<li><i>FishAndOtherThingsCaught</i>: Number of fishes and other things caught by the player                                                             </li>
+<li><i>HighestAlchemySkill</i>: Identification number of highest alchemy skill of the player                                                            </li>
+<li><i>AlchemyRecipesLearned</i>: Number of alchemy recipes learned by the player                                                                       </li>
+<li><i>HighestBlacksmithingSkill</i>: Identification number of highest blacksmithing skill of the player                                                </li>
+<li><i>BlacksmithingPlansLearned</i>: Number of blacksmithing plans learned by the player                                                               </li>
+<li><i>HighestEnchantingSkill</i>: Identification number of highest enchanting skill of the player                                                      </li>
+<li><i>EnchantingFormulaeLearned</i>: Number of enchanting formulae learned by the player                                                               </li>
+<li><i>MaterialsProducedFromDisenchanting</i>: Number of materials produced from disenchanting items by the player                                      </li>
+<li><i>ItemsDisenchanted</i>: Number of items disenchanted by the player                                                                                </li>
+<li><i>HighestEngineeringSkill</i>: Identification number of highest engineering skill of the player                                                    </li>
+<li><i>EngineeringSchematicsLearned</i>: Number of engineering schematics learned by the player                                                         </li>
+<li><i>HighestHerbalismSkill</i>: Identification number of highest herbalism skill of the player                                                        </li>
+<li><i>HighestInscriptionSkill</i>: Identification number of highest inscription skill of the player                                                    </li>
+<li><i>InscriptionsLearned</i>: Number of inscriptions learned by the player                                                                            </li>
+<li><i>HighestJewelcraftingSkill</i>: Identification number of highest jewel-crafting skill of the player                                               </li>
+<li><i>JewelcraftingDesignsLearned</i>: Number of jewel-crafting designs learned by the player                                                          </li>
+<li><i>HighestLeatherworkingSkill</i>: Identification number of highest leatherworking skill of the player                                              </li>
+<li><i>LeatherworkingPatternsLearned</i>: Number of leatherworking patterns learned by the player                                                       </li>
+<li><i>HighestMiningSkill</i>: Identification number of highest mining skill of the player                                                              </li>
+<li><i>SmeltingRecipesLearned</i>: Number of smelting recipes learned by the player                                                                     </li>
+<li><i>HighestSkinningSkill</i>: Identification number of highest skinning skill of the player                                                          </li>
+<li><i>HighestTailoringSkill</i>: Identification number of highest tailoring skill of the player                                                        </li>
+<li><i>TailoringPatternsLearned</i>: Number of tailoring patterns learned by the player                                                                 </li>
+<li><i>FlightPathsTaken</i>: Number of flights taken by the player                                                                                      </li>
+<li><i>SummonsAccepted</i>: Number of summons by other players accepted by the player                                                                   </li>
+<li><i>MagePortalsTaken</i>: Number of mage portals taken by the player                                                                                 </li>
+<li><i>NumberOfExpressionsMade</i>: Number of expressions made by the player                                                                            </li>
+<li><i>TotalDeathsFromOtherPlayers</i>: Total number of deaths received from other players                                                              </li>
+<li><i>TotalDeathsFromOppositeFaction</i>: Total number of deaths received from other players in opposite factions                                      </li>
+<li><i>ArenasWon</i>: Number of arenas won by the player                                                                                                </li>
+<li><i>ArenasPlayed</i>: Number of arenas played by the player                                                                                          </li>
+<li><i>5v5Matches</i>: Number of 5 player versus 5 player matches played by the player                                                                  </li>
+<li><i>5v5Victories</i>: Number of 5 player versus 5 player matcher won by the player                                                                   </li>
+<li><i>3v3Matches</i>: Number of 3 player versus 3 player matches played by the player                                                                  </li>
+<li><i>3v3Victories</i>: Number of 3 player versus 3 player matcher won by the player                                                                   </li>
+<li><i>2v2Matches</i>: Number of 2 player versus 2 player matches played by the player                                                                  </li>
+<li><i>2v2Victories</i>: Number of 2 player versus 2 player matcher won by the player                                                                   </li>
+<li><i>Highest5ManPersonalRating</i>: Value of highest rating of the player in 5 player versus 5 player matches                                         </li>
+<li><i>Highest3ManPersonalRating</i>: Value of highest rating of the player in 3 player versus 3 player matches                                         </li>
+<li><i>Highest2ManPersonalRating</i>: Value of highest rating of the player in 2 player versus 2 player matches                                         </li>
+<li><i>Highest5ManTeamRating</i>: Value of highest rating of the player’s team in 5 player versus 5 player matches                                      </li>
+<li><i>Highest3ManTeamRating</i>: Value of highest rating of the player’s team in 3 player versus 3 player matches                                      </li>
+<li><i>Highest2ManTeamRating</i>: Value of highest rating of the player’s team in 2 player versus 2 player matches                                      </li>
+<li><i>TotalProbDefended</i>: Total number of team match artifacts defended by the player                                                               </li>
+<li><i>TotalProbCaptured</i>: Total number of team match artifacts captured by the player                                                               </li>
+<li><i>RatedBattlegroundsPlayed</i>: Number of rated battle grounds played by the player                                                                </li>
+<li><i>RatedBattlegroundsWon</i>: Number of rated battle grounds won by the player                                                                      </li>
+<li><i>DuelsWon</i>: Number of duels won that player participated                                                                                       </li>
+<li><i>DuelsLost</i>: Number of duels lost that player participated                                                                                     </li>
+<li><i>VanityPetsOwned</i>: Number of vanity pets owned by the player                                                                                   </li>
+<li><i>PetBattlesWonAtMaxLevel</i>: Number of pet battle won at max level by the player                                                                 </li>
+<li><i>PvPPetBattlesWonAtMaxLevel</i>: Number of pet battle won at max level in player versus player by the player                                      </li>
+<li><i>PvPPetBattlesWonThroughFindBattleWithAFullTeamOfLevel25Pets</i>: Number of pet battle won at max level through find battle with a full team of level 25 pets by the player</li>
+<li><i>CelestialTournamentWins</i>: Number of celestial tournaments won by the player                        </li>
+<li><i>HighestScoreDamage</i>: Value of the highest damaging related score of the player                     </li>
+<li><i>HighestScoreTank</i>: Value of the highest tanking related score of the player                        </li>
+<li><i>HighestScoreHealer</i>: Value of the highest healing related score of the player                      </li>
+<li><i>ClassHallChampionsRecruited</i>: Number of class hall champions recruited by the player               </li>
+<li><i>ClassHallTroopsRecruited</i>: Number of class hall troops recruited by the player                     </li>
+<li><i>ClassHallMissionsCompleted</i>: Number of class hall missions completed by the player                 </li>
+<li><i>ClassHallRareMissionsCompleted</i>: Number of rare class hall missions completed by the player        </li>
+<li><i>GarrisonFollowersRecruited</i>: Number of garrison followers recruited by the player                  </li>
+<li><i>GarrisonMissionsCompleted</i>: Number of garrison missions completed by the player                    </li>
+<li><i>GarrisonRareMissionsCompleted</i>: Number of rare garrison missions completed by the player           </li>
+<li><i>BadgesOfJusticeAcquired</i>: Number of badges of justice acquired by the player                       </li>
+<li><i>EmblemsOfHeroismAcquired</i>: Number of emblems of heroism acquired by the player                     </li>
+<li><i>EmblemsOfValorAcquired</i>: Number of emblems of valor acquired by the player                         </li>
+<li><i>EmblemsOfConquestAcquired</i>: Number of emblems of conquest acquired by the player                   </li>
+<li><i>EmblemsOfTriumphAcquired</i>: Number of emblems of triumph acquired by the player                     </li>
+<li><i>EmblemsOfFrostAcquired</i>: Number of emblems of frost acquired by the player                         </li>
+<li><i>HighestScoreDamageLevel90</i>: Highest damaging score at level 90 of the player                       </li>
+<li><i>HighestScoreTankLevel90</i>: Highest tanking score at level 90 of the player                          </li>
+<li><i>HighestScoreHealerLevel90</i>: Highest healing score at level 90 of the player                        </li>
+<li><i>BronzeChallengeRatingsEarned</i>: Number of bronze challenge ratings earned                           </li>
+<li><i>SilverChallengeRatingsEarned</i>: Number of silver challenge ratings earned                           </li>
+<li><i>GoldChallengeRatingsEarned</i>: Number of gold challenge ratings earned                               </li>
+
+
+</ol>  
+
+</body>
+</html>
